@@ -6,13 +6,13 @@
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
-        "email": "imaliy.filsh@gmail.com",
-        "source": "https://github.com/filsh/yii2-oauth2-server"
+        "email": "imaliy.windhoney@gmail.com",
+        "source": "https://github.com/windhoney/yii2-oauth2-server"
     },
     "authors": [
         {
             "name": "Igor Maliy",
-            "email": "imaliy.filsh@gmail.com"
+            "email": "imaliy.windhoney@gmail.com"
         }
     ],
     "require": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "filsh\\yii2\\oauth2server\\": ""
+            "windhoney\\yii2\\oauth2server\\": ""
         }
     },
     "extra": {

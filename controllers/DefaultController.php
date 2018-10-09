@@ -1,10 +1,10 @@
 <?php
 
-namespace filsh\yii2\oauth2server\controllers;
+namespace windhoney\yii2\oauth2server\controllers;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use filsh\yii2\oauth2server\filters\ErrorToExceptionFilter;
+use windhoney\yii2\oauth2server\filters\ErrorToExceptionFilter;
 
 class DefaultController extends \yii\rest\Controller
 {
