@@ -5,6 +5,7 @@ namespace filsh\yii2\oauth2server;
 use \Yii;
 use yii\i18n\PhpMessageSource;
 use  \array_key_exists;
+use yii\helpers\ArrayHelper;
 
 /**
  * For example,
@@ -31,7 +32,7 @@ use  \array_key_exists;
  */
 class Module extends \yii\base\Module
 {
-    const VERSION = '2.0.0';
+    const VERSION = '2.0.2';
     
     /**
      * @var array Model's map
@@ -135,7 +136,7 @@ class Module extends \yii\base\Module
     
     public function getRequest()
     {
-        if(!$this->has('request')) {
+        if(!ArrayHelper::keyExists('request', $this->getComponents())) {
             $this->set('request', Request::createFromGlobals());
         }
         return $this->get('request');
@@ -143,7 +144,7 @@ class Module extends \yii\base\Module
     
     public function getResponse()
     {
-        if(!$this->has('response')) {
+        if(!ArrayHelper::keyExists('response', $this->getComponents())) {
             $this->set('response', new Response());
         }
         return $this->get('response');
