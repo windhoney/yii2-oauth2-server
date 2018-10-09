@@ -1,8 +1,8 @@
 {
-    "name": "filsh/yii2-oauth2-server-fix",
+    "name": "filsh/yii2-oauth2-server",
     "description": "OAuth2 Server for PHP",
     "keywords": ["yii", "extension", "module", "oauth", "oauth2"],
-    "homepage": "https://github.com/filsh/yii2-oauth2-server-fix.git",
+    "homepage": "https://github.com/filsh/yii2-oauth2-server",
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
@@ -17,7 +17,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bshaffer/oauth2-server-php": "v1.3"
+        "bshaffer/oauth2-server-php": "~1.7"
     },
     "autoload": {
         "psr-4": {
@@ -25,6 +25,7 @@
         }
     },
     "extra": {
+        "bootstrap": "filsh\\yii2\\oauth2server\\Bootstrap",
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
