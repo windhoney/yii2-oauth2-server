@@ -1,6 +1,6 @@
 <?php
 
-namespace windhoney\yii2\oauth2server;
+namespace filsh\yii2\oauth2server;
 
 use \Yii;
 use yii\i18n\PhpMessageSource;
@@ -12,7 +12,7 @@ use yii\helpers\ArrayHelper;
  * 
  * ```php
  * 'oauth2' => [
- *     'class' => 'windhoney\yii2\oauth2server\Module',
+ *     'class' => 'filsh\yii2\oauth2server\Module',
  *     'tokenParamName' => 'accessToken',
  *     'tokenAccessLifetime' => 3600 * 24,
  *     'storageMap' => [
@@ -75,7 +75,7 @@ class Module extends \yii\base\Module
     /**
      * Gets Oauth2 Server
      * 
-     * @return \windhoney\yii2\oauth2server\Server
+     * @return \filsh\yii2\oauth2server\Server
      * @throws \yii\base\InvalidConfigException
      */
     public function getServer()

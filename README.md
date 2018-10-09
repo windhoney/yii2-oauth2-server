@@ -11,13 +11,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist windhoney/yii2-oauth2-server "*"
+php composer.phar require --prefer-dist filsh/yii2-oauth2-server "*"
 ```
 
 or add
 
 ```json
-"windhoney/yii2-oauth2-server": "~2.0"
+"filsh/yii2-oauth2-server": "~2.0"
 ```
 
 to the require section of your composer.json.
@@ -28,7 +28,7 @@ To use this extension,  simply add the following code in your application config
 'modules'=>[
         //other modules .....
         'oauth2' => [
-            'class' => 'windhoney\yii2\oauth2server\Module',            
+            'class' => 'filsh\yii2\oauth2server\Module',            
             'tokenParamName' => 'accessToken',
             'tokenAccessLifetime' => 3600 * 24,
             'storageMap' => [
@@ -139,7 +139,7 @@ class User extends common\models\User implements \OAuth2\Storage\UserCredentials
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        /** @var \windhoney\yii2\oauth2server\Module $module */
+        /** @var \filsh\yii2\oauth2server\Module $module */
         $module = Yii::$app->getModule('oauth2');
         $token = $module->getServer()->getResourceController()->getToken();
         return !empty($token['user_id'])
@@ -173,7 +173,7 @@ class User extends common\models\User implements \OAuth2\Storage\UserCredentials
 The next step your shold run migration
 
 ```php
-yii migrate --migrationPath=@vendor/windhoney/yii2-oauth2-server/migrations
+yii migrate --migrationPath=@vendor/filsh/yii2-oauth2-server/migrations
 ```
 
 this migration create the oauth2 database scheme and insert test user credentials ```testclient:testpass``` for ```http://fake/```
@@ -199,8 +199,8 @@ To use this extension,  simply add the behaviors for your base controller:
 use yii\helpers\ArrayHelper;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
-use windhoney\yii2\oauth2server\filters\ErrorToExceptionFilter;
-use windhoney\yii2\oauth2server\filters\auth\CompositeAuth;
+use filsh\yii2\oauth2server\filters\ErrorToExceptionFilter;
+use filsh\yii2\oauth2server\filters\auth\CompositeAuth;
 
 class Controller extends \yii\rest\Controller
 {

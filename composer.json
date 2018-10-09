@@ -1,18 +1,18 @@
 {
-    "name": "windhoney/yii2-oauth2-server-fix",
+    "name": "filsh/yii2-oauth2-server-fix",
     "description": "OAuth2 Server for PHP",
     "keywords": ["yii", "extension", "module", "oauth", "oauth2"],
-    "homepage": "https://github.com/windhoney/yii2-oauth2-server-fix.git",
+    "homepage": "https://github.com/filsh/yii2-oauth2-server-fix.git",
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
-        "email": "imaliy.windhoney@gmail.com",
-        "source": "https://github.com/windhoney/yii2-oauth2-server"
+        "email": "imaliy.filsh@gmail.com",
+        "source": "https://github.com/filsh/yii2-oauth2-server"
     },
     "authors": [
         {
             "name": "Igor Maliy",
-            "email": "imaliy.windhoney@gmail.com"
+            "email": "imaliy.filsh@gmail.com"
         }
     ],
     "require": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "windhoney\\yii2\\oauth2server\\": ""
+            "filsh\\yii2\\oauth2server\\": ""
         }
     },
     "extra": {
