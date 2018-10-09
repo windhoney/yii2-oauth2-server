@@ -1,8 +1,8 @@
 {
-    "name": "filsh/yii2-oauth2-server",
+    "name": "windhoney/yii2-oauth2-server-fix",
     "description": "OAuth2 Server for PHP",
     "keywords": ["yii", "extension", "module", "oauth", "oauth2"],
-    "homepage": "https://github.com/filsh/yii2-oauth2-server",
+    "homepage": "https://github.com/windhoney/yii2-oauth2-server-fix.git",
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
