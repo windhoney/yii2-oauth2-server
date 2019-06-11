@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server\exceptions;
+namespace wind\oauth2\exceptions;
 
 class HttpException extends \yii\web\HttpException
 {

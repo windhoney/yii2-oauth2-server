@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server;
+namespace wind\oauth2;
 
 class Request extends \OAuth2\Request
 {

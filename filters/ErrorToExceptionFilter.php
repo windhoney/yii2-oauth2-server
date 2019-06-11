@@ -1,11 +1,11 @@
 <?php
 
-namespace filsh\yii2\oauth2server\filters;
+namespace wind\oauth2\filters;
 
 use Yii;
 use yii\base\Controller;
-use filsh\yii2\oauth2server\Module;
-use filsh\yii2\oauth2server\exceptions\HttpException;
+use wind\oauth2\Module;
+use wind\oauth2\exceptions\HttpException;
 
 class ErrorToExceptionFilter extends \yii\base\Behavior
 {

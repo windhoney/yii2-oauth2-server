@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server\storage;
+namespace wind\oauth2\storage;
 
 class Pdo extends \OAuth2\Storage\Pdo
 {

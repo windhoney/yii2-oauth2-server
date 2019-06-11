@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server\filters\auth;
+namespace wind\oauth2\filters\auth;
 
 use \Yii;
 

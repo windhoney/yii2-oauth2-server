@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server\models;
+namespace wind\oauth2\models;
 
 use Yii;
 

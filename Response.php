@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server;
+namespace wind\oauth2;
 
 class Response extends \OAuth2\Response
 {

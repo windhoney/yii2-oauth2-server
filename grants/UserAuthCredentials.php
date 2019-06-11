@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server\grants;
+namespace wind\oauth2\grants;
 
 use \OAuth2\Storage\ClientCredentialsInterface;
 use \OAuth2\Storage\UserCredentialsInterface;

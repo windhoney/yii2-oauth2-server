@@ -1,6 +1,6 @@
 <?php
 
-namespace filsh\yii2\oauth2server;
+namespace wind\oauth2;
 
 use yii\web\GroupUrlRule;
 
@@ -10,26 +10,26 @@ class Bootstrap implements \yii\base\BootstrapInterface
      * @var array Model's map
      */
     private $_modelMap = [
-        'OauthClients'               => 'filsh\yii2\oauth2server\models\OauthClients',
-        'OauthAccessTokens'          => 'filsh\yii2\oauth2server\models\OauthAccessTokens',
-        'OauthAuthorizationCodes'    => 'filsh\yii2\oauth2server\models\OauthAuthorizationCodes',
-        'OauthRefreshTokens'         => 'filsh\yii2\oauth2server\models\OauthRefreshTokens',
-        'OauthScopes'                => 'filsh\yii2\oauth2server\models\OauthScopes',
+        'OauthClients'               => 'wind\oauth2\models\OauthClients',
+        'OauthAccessTokens'          => 'wind\oauth2\models\OauthAccessTokens',
+        'OauthAuthorizationCodes'    => 'wind\oauth2\models\OauthAuthorizationCodes',
+        'OauthRefreshTokens'         => 'wind\oauth2\models\OauthRefreshTokens',
+        'OauthScopes'                => 'wind\oauth2\models\OauthScopes',
     ];
     
     /**
      * @var array Storage's map
      */
     private $_storageMap = [
-        'access_token'          => 'filsh\yii2\oauth2server\storage\Pdo',
-        'authorization_code'    => 'filsh\yii2\oauth2server\storage\Pdo',
-        'client_credentials'    => 'filsh\yii2\oauth2server\storage\Pdo',
-        'client'                => 'filsh\yii2\oauth2server\storage\Pdo',
-        'refresh_token'         => 'filsh\yii2\oauth2server\storage\Pdo',
-        'user_credentials'      => 'filsh\yii2\oauth2server\storage\Pdo',
-        'public_key'            => 'filsh\yii2\oauth2server\storage\Pdo',
-        'jwt_bearer'            => 'filsh\yii2\oauth2server\storage\Pdo',
-        'scope'                 => 'filsh\yii2\oauth2server\storage\Pdo',
+        'access_token'          => 'wind\oauth2\storage\Pdo',
+        'authorization_code'    => 'wind\oauth2\storage\Pdo',
+        'client_credentials'    => 'wind\oauth2\storage\Pdo',
+        'client'                => 'wind\oauth2\storage\Pdo',
+        'refresh_token'         => 'wind\oauth2\storage\Pdo',
+        'user_credentials'      => 'wind\oauth2\storage\Pdo',
+        'public_key'            => 'wind\oauth2\storage\Pdo',
+        'jwt_bearer'            => 'wind\oauth2\storage\Pdo',
+        'scope'                 => 'wind\oauth2\storage\Pdo',
     ];
     
     /**
@@ -60,7 +60,7 @@ class Bootstrap implements \yii\base\BootstrapInterface
                 }
             
                 if ($app instanceof \yii\console\Application) {
-                    $module->controllerNamespace = 'filsh\yii2\oauth2server\commands';
+                    $module->controllerNamespace = 'wind\oauth2\commands';
                 }
             }
         }
