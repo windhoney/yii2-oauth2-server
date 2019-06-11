@@ -37,22 +37,31 @@ class Bootstrap implements \yii\base\BootstrapInterface
      */
     public function bootstrap($app)
     {
-        /** @var $module Module */
-        if ($app->hasModule('oauth2') && ($module = $app->getModule('oauth2')) instanceof Module) {
-            $this->_modelMap = array_merge($this->_modelMap, $module->modelMap);
-            foreach ($this->_modelMap as $name => $definition) {
-                \Yii::$container->set("filsh\\yii2\\oauth2server\\models\\" . $name, $definition);
-                $module->modelMap[$name] = is_array($definition) ? $definition['class'] : $definition;
+        $module_list = array_keys($app->getModules());
+        $module_oauth = [];
+        foreach ($module_list as $item) {
+            if (strpos($item,'oauth')===0) {
+                $module_oauth[] = $item;
             }
+        }
+        foreach ($module_oauth as $oauth_name) {
+            /** @var $module Module */
+            if ($app->hasModule($oauth_name) && ($module = $app->getModule($oauth_name)) instanceof Module) {
+                $this->_modelMap = array_merge($this->_modelMap, $module->modelMap);
+                foreach ($this->_modelMap as $name => $definition) {
+                    \Yii::$container->set("filsh\\yii2\\oauth2server\\models\\" . $name, $definition);
+                    $module->modelMap[$name] = is_array($definition) ? $definition['class'] : $definition;
+                }
             
-            $this->_storageMap = array_merge($this->_storageMap, $module->storageMap);
-            foreach ($this->_storageMap as $name => $definition) {
-                \Yii::$container->set($name, $definition);
-                $module->storageMap[$name] = is_array($definition) ? $definition['class'] : $definition;
-            }
+                $this->_storageMap = array_merge($this->_storageMap, $module->storageMap);
+                foreach ($this->_storageMap as $name => $definition) {
+                    \Yii::$container->set($name, $definition);
+                    $module->storageMap[$name] = is_array($definition) ? $definition['class'] : $definition;
+                }
             
-            if ($app instanceof \yii\console\Application) {
-                $module->controllerNamespace = 'filsh\yii2\oauth2server\commands';
+                if ($app instanceof \yii\console\Application) {
+                    $module->controllerNamespace = 'filsh\yii2\oauth2server\commands';
+                }
             }
         }
     }
