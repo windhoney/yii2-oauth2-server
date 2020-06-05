@@ -14,6 +14,7 @@ class Pdo extends \OAuth2\Storage\Pdo
     
     public function __construct($connection = null, $config = array())
     {
+        $this->connection = \Yii::$app->getModule('oauth2')->getDb();
         if($connection === null) {
             if(!empty($this->connection)) {
                 $connection = \Yii::$app->get($this->connection);

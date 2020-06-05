@@ -59,6 +59,11 @@ class Module extends \yii\base\Module
     public $tokenAccessLifetime;
     
     /**
+     * @var string name of db config
+     */
+    public $db = 'db';
+    
+    /**
      * @inheritdoc
      */
     public function init()
@@ -156,5 +161,10 @@ class Module extends \yii\base\Module
     public static function t($category, $message, $params = [], $language = null)
     {
         return Yii::t('modules/oauth2/' . $category, $message, $params, $language);
+    }
+    
+    public function getDb()
+    {
+        return $this->db;
     }
 }
